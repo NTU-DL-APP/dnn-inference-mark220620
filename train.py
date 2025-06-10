@@ -140,7 +140,7 @@ if __name__ == "__main__":
     x_test = load_mnist_images("data/fashion/t10k-images-idx3-ubyte.gz")
     y_test = load_mnist_labels("data/fashion/t10k-labels-idx1-ubyte.gz")
 
-    model_arch, weights = train(x_test, y_test, epochs=20)
+    model_arch, weights = train(x_test, y_test, epochs=100)
 
     save_model_to_h5(weights, model_arch, 'fashion_mnist.h5')
     save_weights_to_npz(weights, 'fashion_mnist.npz')
